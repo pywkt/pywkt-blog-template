@@ -1,0 +1,32 @@
+.tagListUl {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 0rem 1rem;
+}
+
+.tagListUl li {
+  line-height: 1rem;
+}
+
+.tagListUl a {
+  font-size: var(--text-xs);
+}
+
+.tagListUl a::before {
+  content: '#';
+}
+
+@media (min-width: 640px) {
+  .tagListUl {
+    display: block;
+    margin-bottom: 1rem;
+    padding: 0rem 0rem;
+  }
+
+  .tagListUl a::before {
+    content: '';
+  }
+}

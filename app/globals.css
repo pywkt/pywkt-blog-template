@@ -1,0 +1,90 @@
+:root {
+  color-scheme: light;
+  --foreground: #1d3557;
+  --background: #fbf9f1;
+  --border-hr: #e5e1da;
+  --link-hover: #e63946;
+  --text-xs: 0.75rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --foreground: #e0fbfc;
+  --background: #293241;
+  --border-hr: #233f4a;
+  --link-hover: #ee6c4d;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold !important;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+}
+
+h6 {
+  font-size: 0.6rem;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid;
+  border-bottom-color: var(--border-hr);
+}
+
+a {
+  transition: color 150ms;
+
+  &:hover {
+    color: var(--link-hover);
+    transition: color 150ms;
+  }
+}
+
+time {
+  font-style: italic;
+  font-size: 0.75rem;
+}
+
+.postDate {
+  font-size: 0.75rem;
+}
+
+p {
+  font-size: var(--text-sm);
+}
+
+html {
+  color: var(--foreground);
+  background-color: var(--background);
+  border: var(--border-hr);
+}
+
+body {
+  padding: 0 1rem;
+}

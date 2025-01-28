@@ -1,0 +1,129 @@
+export const data = {
+title: "First Post",
+slug: "20250128-first-post",
+author: 'pywkt',
+description: "Lots of cool markdown stuff in here...",
+date: '2025-01-28',
+tags: ["blog"]
+}
+
+## Text Formatting
+
+### Basic Formatting
+This is **bold text** and this is *italic text*.
+You can also use __bold__ and _italic_ this way.
+This is ***bold and italic*** combined.
+Here's ~~strikethrough~~ text.
+
+### Links and URLs
+[Visit pywkt.com](https://pywkt.com)
+
+Plain URL: https://www.example.com
+
+### Lists
+
+#### Unordered List
+* Item 1
+* Item 2
+  * Subitem 2.1
+  * Subitem 2.2
+- Another item
++ Yet another item
+
+#### Ordered List
+1. First item
+2. Second item
+   1. Subitem 2.1
+   2. Subitem 2.2
+3. Third item
+
+## Code
+
+### Inline Code
+Use `print("Hello World")` to output text.
+
+### Code Blocks
+```python
+def greet(name):
+    print(f"Hello, {name}!")
+    return True
+```
+
+```javascript
+function hello() {
+    console.log("Hello World!");
+}
+```
+
+## Quotes
+
+> This is a blockquote
+>> Nested blockquote
+> 
+> Multiple paragraphs in blockquote
+
+## Tables
+
+| Header 1 | Header 2 | Header 3 |
+|----------|:--------:|----------:|
+| Left     | Center   | Right    |
+| aligned  | aligned  | aligned  |
+| cell     | cell     | cell     |
+
+### Simple Table
+First Header | Second Header
+-------------|---------------
+Content Cell | Content Cell
+Content Cell | Content Cell
+
+## Images
+
+<div style={{display: "flex", justifyContent: "center", gap: "3rem", marginBottom: "2rem"}}>
+  <>![Markdown Logo](https://markdown-here.com/img/icon64.png)</>
+  <>![Alt text for image](https://markdown-here.com/img/icon64.png "title")</>
+</div>
+
+## Horizontal Rules
+
+---
+***
+___
+
+## Task Lists
+
+- [x] Completed task
+- [ ] Uncompleted task
+- [x] Another completed task
+  - [ ] Subtask 1
+  - [x] Subtask 2
+
+## Escape Characters
+\*This is not italic\*
+\[This is not a link\]
+
+## Footnotes
+
+Here's a footnote reference[^1]
+And another one[^2]
+
+[^1]: This is the first footnote
+[^2]: This is the second footnote
+
+## Definition Lists
+
+Term 1
+: Definition 1
+
+Term 2
+: Definition 2a
+: Definition 2b
+
+## Advanced Tables
+
+| Item     | Quantity | Price | Total    |
+|----------|:--------:|------:|---------:|
+| Apple    |    2     | $1.00 |   $2.00  |
+| Orange   |    3     | $0.75 |   $2.25  |
+| Banana   |    4     | $0.50 |   $2.00  |
+| **Total**|    9     |       |   $6.25  |
+
