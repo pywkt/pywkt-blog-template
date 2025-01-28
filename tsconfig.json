@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "jsxEmit": "preserve",
     "baseUrl": ".",
     "target": "es2015",
     "lib": [

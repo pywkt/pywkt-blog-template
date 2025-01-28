@@ -1,17 +1,17 @@
-import Script from 'next/script';
-import './preflight.css';
-import './globals.css';
-import Header from '@/components/Header';
-import TagList from '@/components/TagList';
-import { dankMonoReg } from '@/config/fonts';
-import Footer from '@/components/Footer';
-import styles from './layouts.module.css';
-import { siteMetadata } from './siteMetadata';
-import { getTheme } from '@/util/getTheme';
-import dynamic from 'next/dynamic';
-import { siteInfo } from '@/config/siteInfo';
+import Script from "next/script";
+import "./preflight.css";
+import "./globals.css";
+import Header from "@/components/Header";
+import TagList from "@/components/TagList";
+import { dankMonoReg } from "@/config/fonts";
+import Footer from "@/components/Footer";
+import styles from "./layouts.module.css";
+import { siteMetadata } from "./siteMetadata";
+import { getTheme } from "@/util/getTheme";
+import dynamic from "next/dynamic";
+import { siteInfo } from "@/config/siteInfo";
 
-const SetTheme = dynamic(() => import('@/components/SetTheme'), {
+const SetTheme = dynamic(() => import("@/components/SetTheme"), {
   ssr: false,
 });
 
@@ -22,20 +22,21 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const isProd = process.env.NEXT_PUBLIC_IS_PROD === 'true';
+  const isProd = process.env.NEXT_PUBLIC_IS_PROD === "true";
   const {
     leftSpacerGrid,
     mainContentContainer,
     pageGrid,
     tagListContainer,
     themeToggleContainer,
+    siteFooter,
   } = styles;
 
   return (
-    <html lang='en' className={`${dankMonoReg.className}`}>
+    <html lang="en" className={`${dankMonoReg.className}`}>
       <head>
         <Script
-          id='themeToggle'
+          id="themeToggle"
           dangerouslySetInnerHTML={{ __html: getTheme }}
         />
       </head>
@@ -60,6 +61,12 @@ export default function RootLayout({
           </div>
           <div className={tagListContainer}>
             <TagList />
+          </div>
+          <div className={siteFooter}>
+            designed by{" "}
+            <a href="https://pywkt.com" target="_blank">
+              pywkt
+            </a>
           </div>
         </div>
       </body>

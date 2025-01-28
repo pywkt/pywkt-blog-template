@@ -31,6 +31,17 @@
   padding-left: 1rem;
 }
 
+.siteFooter {
+  position: absolute;
+  bottom: 1rem;
+  width: 98dvw;
+  /* margin: auto; */
+  /* background-color: cyan; */
+  text-align: center;
+  font-size: var(--text-xs);
+  color: var(--foreground);
+}
+
 /* sm */
 @media (min-width: 640px) {
   .pageGrid {

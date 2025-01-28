@@ -1,5 +1,5 @@
-# pywkt.com
-Source code for [pywkt.com](https://pywkt.com)
+# pywkt.com Blog Template
+Source code/template for [pywkt.com](https://pywkt.com)
 
 NextJS/MDX-JS
 
@@ -8,15 +8,19 @@ NextJS/MDX-JS
 - Clone Repo
 - `cd` into directory
 - `npm install`
-- `touch .env`
+- `mv example.env .env`
+- `npm run dev`
 
-.env
 ```env
 NEXT_PUBLIC_CF_IMG = <cloudflare_r2_bucket_url>
 NEXT_PUBLIC_PL_URL = <plausible_url/script.js>
 GH_REPO_ID = <from_giscus_setup>
 GH_CATEGORY_ID = <from_giscus_setup>
 ```
+
+All `env` values are optional, but the `.env` file needs to exist.
+
+---
 
 config/giscusConfig.ts
 - Set up Giscus at [giscus.app](https://giscus.app/)
@@ -47,7 +51,7 @@ Remove the `components/PostComments` directory and the corresponding import in `
 
 ---
 
-See the `posts` directory for examples on how to format posts.
+See the `posts` directory for an example on how to format posts.
 
 A "post" is an `mdx` file with a `data` object on line 1.
 ```js
