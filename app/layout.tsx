@@ -79,7 +79,7 @@ export default function RootLayout({
               </a>
             </div>
           </div>
-        </body>{" "}
+        </body>
       </head>
     </html>
   );
