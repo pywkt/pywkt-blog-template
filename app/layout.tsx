@@ -3,7 +3,7 @@ import "./preflight.css";
 import "./globals.css";
 import Header from "@/components/Header";
 import TagList from "@/components/TagList";
-import { dankMonoReg } from "@/config/fonts";
+import { dankMonoReg, dankMonoItal } from "@/config/fonts";
 import Footer from "@/components/Footer";
 import styles from "./layouts.module.css";
 import { siteMetadata } from "./siteMetadata";
@@ -33,43 +33,54 @@ export default function RootLayout({
   } = styles;
 
   return (
-    <html lang="en" className={`${dankMonoReg.className}`}>
+    <html
+      lang="en"
+      className={`${dankMonoReg.className} ${dankMonoItal.variable}`}
+    >
       <head>
         <Script
           id="themeToggle"
           dangerouslySetInnerHTML={{ __html: getTheme }}
         />
-      </head>
-      <body>
-        {isProd && (
-          <Script
-            defer
-            data-domain={siteInfo.appUrl}
-            src={process.env.NEXT_PUBLIC_PL_URL}
-          />
-        )}
-        <Header />
-        <div className={themeToggleContainer}>
-          <SetTheme />
-        </div>
+        <body>
+          <div
+            style={{
+              minHeight: "100vh",
+              position: "relative",
+              paddingBottom: "2rem",
+            }}
+          >
+            {isProd && (
+              <Script
+                defer
+                data-domain={siteInfo.appUrl}
+                src={process.env.NEXT_PUBLIC_PL_URL}
+              />
+            )}
+            <Header />
+            <div className={themeToggleContainer}>
+              <SetTheme />
+            </div>
 
-        <div className={pageGrid}>
-          <div className={leftSpacerGrid} />
-          <div className={mainContentContainer}>
-            {children}
-            <Footer />
+            <div className={pageGrid}>
+              <div className={leftSpacerGrid} />
+              <div className={mainContentContainer}>
+                {children}
+                <Footer />
+              </div>
+              <div className={tagListContainer}>
+                <TagList />
+              </div>
+            </div>
+            <div className={siteFooter}>
+              designed by{" "}
+              <a href="https://pywkt.com" target="_blank">
+                pywkt
+              </a>
+            </div>
           </div>
-          <div className={tagListContainer}>
-            <TagList />
-          </div>
-          <div className={siteFooter}>
-            designed by{" "}
-            <a href="https://pywkt.com" target="_blank">
-              pywkt
-            </a>
-          </div>
-        </div>
-      </body>
+        </body>{" "}
+      </head>
     </html>
   );
 }

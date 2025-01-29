@@ -1,14 +1,14 @@
 import fs from "node:fs/promises";
-import { compile, run } from "@mdx-js/mdx";
 import * as jsxRuntime from "react/jsx-runtime";
+import { compile, run } from "@mdx-js/mdx";
+import { Metadata } from "next";
 import remarkGfm from "remark-gfm";
+import rehypePrettyCode from "rehype-pretty-code";
 import { customComponents } from "@/config/customMDXComponents";
 import PostPage from "@/components/PostPage";
-import rehypePrettyCode from "rehype-pretty-code";
-import { postMetadata } from "./postMetadata";
-import { Metadata } from "next";
-import { getSinglePostMeta, getAllFiles } from "@/util/getPostMetadata";
 import { Post } from "@/components/AllPosts";
+import { postMetadata } from "./postMetadata";
+import { getSinglePostMeta, getAllFiles } from "@/util/getPostMetadata";
 import { MDXComponents } from "mdx/types";
 
 type MetadataProps = {
@@ -30,11 +30,17 @@ export async function generateMetadata({
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const options = {
-    theme: "material-theme",
+    grid: true,
+    theme: {
+      light: "rose-pine-moon",
+      dark: "catppuccin-mocha",
+    },
+    bypassInlineCode: false,
     defaultLang: {
       block: "javascript",
       inline: "shell",
     },
+    keepBackground: true,
     tokensMap: {
       txt: "entity.name.",
     },
