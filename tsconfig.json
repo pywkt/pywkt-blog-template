@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
     "target": "es2015",
     "lib": [
       "dom",
@@ -40,3 +39,4 @@
     "node_modules"
   ]
 }
+

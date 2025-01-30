@@ -74,7 +74,7 @@ export default function RootLayout({
             </div>
             <div className={siteFooter}>
               designed by{" "}
-              <a href="https://pywkt.com" target="_blank">
+              <a href="https://github.com/pywkt" target="_blank">
                 pywkt
               </a>
             </div>
